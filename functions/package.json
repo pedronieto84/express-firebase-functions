@@ -5,8 +5,9 @@
     "serve": "firebase emulators:start --only functions",
     "shell": "firebase functions:shell",
     "start": "npm run shell",
-    "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
+    "logs": "firebase functions:log",
+    "predeploy": "powershell   (Select-String -Path  ../index.js -Pattern REMOVE-ON-DEPLOY -NotMatch).line > main.js",
+    "deploy": "firebase deploy"
   },
   "engines": {
     "node": "16"
