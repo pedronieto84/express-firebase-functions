@@ -1,15 +1,17 @@
+
+
 const express = require('express')
 const app = express()
-const port = 3000
+const port = 3000 // REMOVE-ON-DEPLOY
 
 const admin = require("firebase-admin");
 admin.initializeApp()
 const db = admin.firestore()
 
 app.get('/', (req, res) => {
-    console.log('hola')
   res.send('Api de usuarios!')
 })
+
 // Obtener todos los usuarios
 app.get('/users', async (req, res) => {
   const users = await db.collection('users').get()
@@ -18,17 +20,16 @@ app.get('/users', async (req, res) => {
       user: d.data(),
       id: d.id
     }
-    
   })
   res.send(objectsOfUsers)
 })
 
 // Crear un usuario
 app.post('/user', async (req, res) => {
-
   const user = req.body
-  const id = await db.collection('users').add(user)
-  res.send({user, id })
+  const ref = await db.collection('users').add(user)
+  console.log('id', ref.id)
+  res.send({user, id: ref.id })
 })
 
 // Obtener un usuario en concreto
@@ -53,7 +54,6 @@ app.delete('/user/:id', async (req, res) => {
   res.send({deleteOperation})
 })
 
-  
 
 app.listen(port, () => { // REMOVE-ON-DEPLOY
   console.log(`Example app listening on port ${port}`) // REMOVE-ON-DEPLOY
