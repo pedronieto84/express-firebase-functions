@@ -9,7 +9,18 @@ admin.initializeApp()
 const db = admin.firestore()
 
 app.get('/', (req, res) => {
-  res.send('Api de usuarios!')
+  console.log('get')
+  res.send('Api de usuarios! 34')
+})
+
+// Pruebo el Login
+app.post('/login', async (req,res)=>{
+  console.log('login')
+  const authSdk = admin.auth()
+  const token = req.body.token
+  const user = await authSdk.verifyIdToken(token)
+  console.log('user', user)
+  res.send(user)
 })
 
 // Obtener todos los usuarios
