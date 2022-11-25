@@ -7,14 +7,15 @@
     "start": "npm run shell",
     "logs": "firebase functions:log",
     "predeploy": "powershell   (Select-String -Path  ../index.js -Pattern REMOVE-ON-DEPLOY -NotMatch).line > main.js",
-    "deploy": "firebase deploy"
+    "deploy": "firebase deploy",
+    "format": "powershell   (Select-String -Path  ../index.js -Pattern REMOVE-ON-DEPLOY -NotMatch).line > main.js" 
   },
   "engines": {
     "node": "16"
   },
   "main": "index.js",
   "dependencies": {
-    "firebase-admin": "^10.0.2",
+    "firebase-admin": "^10.2.0",
     "firebase-functions": "^3.18.0"
   },
   "devDependencies": {

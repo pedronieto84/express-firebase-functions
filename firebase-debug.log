@@ -1,0 +1,210 @@
+[debug] [2022-11-25T08:00:20.823Z] ----------------------------------------------------------------------
+[debug] [2022-11-25T08:00:20.824Z] Command:       C:\Users\Even\AppData\Local\Volta\tools\image\node\16.17.1\node.exe C:\Users\Even\AppData\Local\Volta\tools\image\packages\firebase-tools\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-11-25T08:00:20.825Z] CLI Version:   11.14.1
+[debug] [2022-11-25T08:00:20.825Z] Platform:      win32
+[debug] [2022-11-25T08:00:20.825Z] Node Version:  v16.17.1
+[debug] [2022-11-25T08:00:20.826Z] Time:          Fri Nov 25 2022 09:00:20 GMT+0100 (hora estándar de Europa central)
+[debug] [2022-11-25T08:00:20.826Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-25T08:00:20.888Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-25T08:00:20.888Z] > authorizing via signed-in user (pedro.nieto.sanchez@gmail.com)
+[debug] [2022-11-25T08:00:20.888Z] [iam] checking project express-firebase-functions for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2022-11-25T08:00:20.891Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/express-firebase-functions:testIamPermissions [none]
+[debug] [2022-11-25T08:00:20.891Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/express-firebase-functions:testIamPermissions x-goog-quota-user=projects/express-firebase-functions
+[debug] [2022-11-25T08:00:20.891Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/express-firebase-functions:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2022-11-25T08:00:21.725Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/express-firebase-functions:testIamPermissions 200
+[debug] [2022-11-25T08:00:21.725Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/express-firebase-functions:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2022-11-25T08:00:21.726Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/express-firebase-functions/serviceAccounts/express-firebase-functions@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2022-11-25T08:00:21.726Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/express-firebase-functions/serviceAccounts/express-firebase-functions@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2022-11-25T08:00:22.490Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/express-firebase-functions/serviceAccounts/express-firebase-functions@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2022-11-25T08:00:22.490Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/express-firebase-functions/serviceAccounts/express-firebase-functions@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'express-firebase-functions'...
+[info] 
+[info] i  deploying functions 
+[debug] [2022-11-25T08:00:22.493Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/express-firebase-functions [none]
+[debug] [2022-11-25T08:00:22.796Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/express-firebase-functions 200
+[debug] [2022-11-25T08:00:22.796Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/express-firebase-functions {"projectId":"express-firebase-functions","projectNumber":"228076214758","displayName":"express-firebase-functions","name":"projects/express-firebase-functions","resources":{"hostingSite":"express-firebase-functions"},"state":"ACTIVE","etag":"1_75d727ea-7cc8-42b5-b83f-e6a1de969411"}
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2022-11-25T08:00:22.798Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/express-firebase-functions/services/cloudfunctions.googleapis.com [none]
+[debug] [2022-11-25T08:00:22.798Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/express-firebase-functions/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/express-firebase-functions
+[debug] [2022-11-25T08:00:22.800Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/express-firebase-functions/services/runtimeconfig.googleapis.com [none]
+[debug] [2022-11-25T08:00:22.800Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/express-firebase-functions/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/express-firebase-functions
+[debug] [2022-11-25T08:00:22.801Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/express-firebase-functions/services/cloudbuild.googleapis.com [none]
+[debug] [2022-11-25T08:00:22.801Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/express-firebase-functions/services/cloudbuild.googleapis.com x-goog-quota-user=projects/express-firebase-functions
+[debug] [2022-11-25T08:00:22.801Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/express-firebase-functions/services/artifactregistry.googleapis.com [none]
+[debug] [2022-11-25T08:00:22.801Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/express-firebase-functions/services/artifactregistry.googleapis.com x-goog-quota-user=projects/express-firebase-functions
+[debug] [2022-11-25T08:00:23.809Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/express-firebase-functions/services/cloudfunctions.googleapis.com 200
+[debug] [2022-11-25T08:00:23.810Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/express-firebase-functions/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2022-11-25T08:00:23.814Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/express-firebase-functions/services/runtimeconfig.googleapis.com 200
+[debug] [2022-11-25T08:00:23.814Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/express-firebase-functions/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2022-11-25T08:00:23.817Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/express-firebase-functions/services/artifactregistry.googleapis.com 200
+[debug] [2022-11-25T08:00:23.818Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/express-firebase-functions/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2022-11-25T08:00:23.862Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/express-firebase-functions/services/cloudbuild.googleapis.com 200
+[debug] [2022-11-25T08:00:23.862Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/express-firebase-functions/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2022-11-25T08:00:23.863Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/express-firebase-functions/adminSdkConfig [none]
+[debug] [2022-11-25T08:00:24.230Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/express-firebase-functions/adminSdkConfig 200
+[debug] [2022-11-25T08:00:24.230Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/express-firebase-functions/adminSdkConfig {"projectId":"express-firebase-functions","storageBucket":"express-firebase-functions.appspot.com"}
+[debug] [2022-11-25T08:00:24.232Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/express-firebase-functions/configs [none]
+[debug] [2022-11-25T08:00:24.995Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/express-firebase-functions/configs 200
+[debug] [2022-11-25T08:00:24.995Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/express-firebase-functions/configs {}
+[info] i  functions: preparing codebase default for deployment 
+[debug] [2022-11-25T08:00:24.996Z] Validating nodejs source
+[warn] !  functions: package.json indicates an outdated version of firebase-functions. Please upgrade using npm install --save firebase-functions@latest in your functions directory. 
+[warn] !  functions: Please note that there will be breaking changes when you upgrade. 
+[debug] [2022-11-25T08:00:26.449Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "logs": "firebase functions:log",
+    "predeploy": "powershell   (Select-String -Path  ../index.js -Pattern REMOVE-ON-DEPLOY -NotMatch).line > main.js",
+    "deploy": "firebase deploy",
+    "format": "powershell   (Select-String -Path  ../index.js -Pattern REMOVE-ON-DEPLOY -NotMatch).line > main.js"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.2.0",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-11-25T08:00:26.450Z] Building nodejs source
+[debug] [2022-11-25T08:00:26.451Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-11-25T08:00:26.638Z] Serving at port 9005
+
+[debug] [2022-11-25T08:00:26.697Z] Got response from /__/functions.yaml {"endpoints":{"helloWorld":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"helloWorld"},"api":{"platform":"gcfv1","httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-11-25T08:00:26.706Z] shutdown requested via /__/quitquitquit
+
+[info] i  functions: preparing functions directory for uploading... 
+[info] i  functions: packaged C:\Users\Even\Desktop\api\express-firebase-functions\functions (54.15 KB) for uploading 
+[debug] [2022-11-25T08:00:26.757Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/express-firebase-functions/locations/-/functions [none]
+[debug] [2022-11-25T08:00:27.412Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/express-firebase-functions/locations/-/functions 200
+[debug] [2022-11-25T08:00:27.412Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/express-firebase-functions/locations/-/functions {"functions":[{"name":"projects/express-firebase-functions/locations/us-central1/functions/api","httpsTrigger":{"url":"https://us-central1-express-firebase-functions.cloudfunctions.net/api","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"api","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"express-firebase-functions@appspot.gserviceaccount.com","updateTime":"2022-11-25T07:58:17.644Z","versionId":"5","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"a3174ee7328857e1352501f6cc2f65b1d36cf6fa"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-961324728349.us-central1.cloudfunctions.appspot.com/8905563a-755c-4d26-876b-a5c07a62bb18.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"express-firebase-functions\",\"storageBucket\":\"express-firebase-functions.appspot.com\"}","GCLOUD_PROJECT":"express-firebase-functions"},"runtime":"nodejs16","ingressSettings":"ALLOW_ALL","buildId":"ce077d7c-8f23-4209-8f5a-27f35c318136","buildName":"projects/228076214758/locations/us-central1/builds/ce077d7c-8f23-4209-8f5a-27f35c318136","dockerRegistry":"ARTIFACT_REGISTRY"},{"name":"projects/express-firebase-functions/locations/us-central1/functions/helloWorld","httpsTrigger":{"url":"https://us-central1-express-firebase-functions.cloudfunctions.net/helloWorld","securityLevel":"SECURE_ALWAYS"},"status":"ACTIVE","entryPoint":"helloWorld","timeout":"60s","availableMemoryMb":256,"serviceAccountEmail":"express-firebase-functions@appspot.gserviceaccount.com","updateTime":"2022-11-25T01:12:25.462Z","versionId":"4","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"4c3234b89c43924e16f07690848986ca7a629cb5"},"sourceUploadUrl":"https://storage.googleapis.com/uploads-961324728349.us-central1.cloudfunctions.appspot.com/15115956-5850-4e0c-b87d-817d0c1ba02c.zip","environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"express-firebase-functions\",\"storageBucket\":\"express-firebase-functions.appspot.com\"}","GCLOUD_PROJECT":"express-firebase-functions"},"runtime":"nodejs16","ingressSettings":"ALLOW_ALL","buildId":"83b7a370-ee0c-46b3-945b-b87fcca712b2","buildName":"projects/228076214758/locations/us-central1/builds/83b7a370-ee0c-46b3-945b-b87fcca712b2","dockerRegistry":"ARTIFACT_REGISTRY"}]}
+[debug] [2022-11-25T08:00:27.413Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/express-firebase-functions/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2022-11-25T08:00:29.012Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/express-firebase-functions/locations/-/functions 200
+[debug] [2022-11-25T08:00:29.012Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/express-firebase-functions/locations/-/functions {}
+[debug] [2022-11-25T08:00:29.019Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/express-firebase-functions [none]
+[debug] [2022-11-25T08:00:29.362Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/express-firebase-functions 200
+[debug] [2022-11-25T08:00:29.362Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/express-firebase-functions {"projectId":"express-firebase-functions","projectNumber":"228076214758","displayName":"express-firebase-functions","name":"projects/express-firebase-functions","resources":{"hostingSite":"express-firebase-functions"},"state":"ACTIVE","etag":"1_75d727ea-7cc8-42b5-b83f-e6a1de969411"}
+[debug] [2022-11-25T08:00:29.363Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/express-firebase-functions [none]
+[debug] [2022-11-25T08:00:29.702Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/express-firebase-functions 200
+[debug] [2022-11-25T08:00:29.703Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/express-firebase-functions {"projectId":"express-firebase-functions","projectNumber":"228076214758","displayName":"express-firebase-functions","name":"projects/express-firebase-functions","resources":{"hostingSite":"express-firebase-functions"},"state":"ACTIVE","etag":"1_75d727ea-7cc8-42b5-b83f-e6a1de969411"}
+[debug] [2022-11-25T08:00:29.704Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v1/projects/express-firebase-functions/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2022-11-25T08:00:29.704Z] >>> [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/express-firebase-functions/locations/us-central1/functions:generateUploadUrl {}
+[debug] [2022-11-25T08:00:30.414Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v1/projects/express-firebase-functions/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2022-11-25T08:00:30.415Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v1/projects/express-firebase-functions/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/uploads-961324728349.us-central1.cloudfunctions.appspot.com/4edcfada-2ecb-4f42-93d4-27353ea4030a.zip?GoogleAccessId=service-228076214758@gcf-admin-robot.iam.gserviceaccount.com&Expires=1669365028&Signature=RvP%2Fl2%2BLQIZspV5i2P%2BaJTkQoXbl7Ee0PRn14982Qhb8Iart9db17T%2FiXfRXD4tnLrcb4Ncah9%2FdYSLpCb5yQP30%2FWHOw4WjQvHfBUDfCDM910zA7ivWDMfE%2BOSpONnScxVoE%2BdN0Rv4%2BkJ9GRPPfNjlAYCXQemk7xjAv%2BkLxIHbDL7XgA%2FqY81TAdMhpGLrwMp4LWLsTTnidADXOeIW4LejGfJagw9XqSPf8gMa7XLH0tzwWk7K6b3xCuWMW%2BDpu7Dp0RCWmhCmZ6HgpCCByNLLPlgc6j3JEZe%2F%2Fve9DNdV4QzaZxX9tJeM%2Fvy2pm6f8HfeL%2FCWfqNF4QjRUgntzQ%3D%3D"}
+[debug] [2022-11-25T08:00:30.417Z] >>> [apiv2][query] PUT https://storage.googleapis.com/uploads-961324728349.us-central1.cloudfunctions.appspot.com/4edcfada-2ecb-4f42-93d4-27353ea4030a.zip GoogleAccessId=service-228076214758%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1669365028&Signature=RvP%2Fl2%2BLQIZspV5i2P%2BaJTkQoXbl7Ee0PRn14982Qhb8Iart9db17T%2FiXfRXD4tnLrcb4Ncah9%2FdYSLpCb5yQP30%2FWHOw4WjQvHfBUDfCDM910zA7ivWDMfE%2BOSpONnScxVoE%2BdN0Rv4%2BkJ9GRPPfNjlAYCXQemk7xjAv%2BkLxIHbDL7XgA%2FqY81TAdMhpGLrwMp4LWLsTTnidADXOeIW4LejGfJagw9XqSPf8gMa7XLH0tzwWk7K6b3xCuWMW%2BDpu7Dp0RCWmhCmZ6HgpCCByNLLPlgc6j3JEZe%2F%2Fve9DNdV4QzaZxX9tJeM%2Fvy2pm6f8HfeL%2FCWfqNF4QjRUgntzQ%3D%3D
+[debug] [2022-11-25T08:00:30.417Z] >>> [apiv2][body] PUT https://storage.googleapis.com/uploads-961324728349.us-central1.cloudfunctions.appspot.com/4edcfada-2ecb-4f42-93d4-27353ea4030a.zip [stream]
+[debug] [2022-11-25T08:00:30.833Z] <<< [apiv2][status] PUT https://storage.googleapis.com/uploads-961324728349.us-central1.cloudfunctions.appspot.com/4edcfada-2ecb-4f42-93d4-27353ea4030a.zip 200
+[debug] [2022-11-25T08:00:30.833Z] <<< [apiv2][body] PUT https://storage.googleapis.com/uploads-961324728349.us-central1.cloudfunctions.appspot.com/4edcfada-2ecb-4f42-93d4-27353ea4030a.zip [omitted]
+[info] +  functions: functions folder uploaded successfully 
+[info] i  functions: Skipping the deploy of unchanged functions with experimental support for skipdeployingnoopfunctions 
+[info] +  functions[api(us-central1)] Skipped (No changes detected) 
+[info] i  functions: updating Node.js 16 function helloWorld(us-central1)... 
+[debug] [2022-11-25T08:00:30.841Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v1/projects/express-firebase-functions/locations/us-central1/functions/helloWorld updateMask=name%2CsourceUploadUrl%2CentryPoint%2Cruntime%2CdockerRegistry%2Clabels%2ChttpsTrigger.securityLevel%2CenvironmentVariables%2CavailableMemoryMb%2CsourceToken
+[debug] [2022-11-25T08:00:30.841Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v1/projects/express-firebase-functions/locations/us-central1/functions/helloWorld {"name":"projects/express-firebase-functions/locations/us-central1/functions/helloWorld","sourceUploadUrl":"https://storage.googleapis.com/uploads-961324728349.us-central1.cloudfunctions.appspot.com/4edcfada-2ecb-4f42-93d4-27353ea4030a.zip?GoogleAccessId=service-228076214758@gcf-admin-robot.iam.gserviceaccount.com&Expires=1669365028&Signature=RvP%2Fl2%2BLQIZspV5i2P%2BaJTkQoXbl7Ee0PRn14982Qhb8Iart9db17T%2FiXfRXD4tnLrcb4Ncah9%2FdYSLpCb5yQP30%2FWHOw4WjQvHfBUDfCDM910zA7ivWDMfE%2BOSpONnScxVoE%2BdN0Rv4%2BkJ9GRPPfNjlAYCXQemk7xjAv%2BkLxIHbDL7XgA%2FqY81TAdMhpGLrwMp4LWLsTTnidADXOeIW4LejGfJagw9XqSPf8gMa7XLH0tzwWk7K6b3xCuWMW%2BDpu7Dp0RCWmhCmZ6HgpCCByNLLPlgc6j3JEZe%2F%2Fve9DNdV4QzaZxX9tJeM%2Fvy2pm6f8HfeL%2FCWfqNF4QjRUgntzQ%3D%3D","entryPoint":"helloWorld","runtime":"nodejs16","dockerRegistry":"ARTIFACT_REGISTRY","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"a3174ee7328857e1352501f6cc2f65b1d36cf6fa"},"httpsTrigger":{"securityLevel":"SECURE_ALWAYS"},"environmentVariables":{"FIREBASE_CONFIG":"{\"projectId\":\"express-firebase-functions\",\"storageBucket\":\"express-firebase-functions.appspot.com\"}","GCLOUD_PROJECT":"express-firebase-functions"},"availableMemoryMb":256}
+[debug] [2022-11-25T08:00:31.571Z] <<< [apiv2][status] PATCH https://cloudfunctions.googleapis.com/v1/projects/express-firebase-functions/locations/us-central1/functions/helloWorld 400
+[debug] [2022-11-25T08:00:31.571Z] <<< [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v1/projects/express-firebase-functions/locations/us-central1/functions/helloWorld {"error":{"code":400,"message":"An operation on function helloWorld in region us-central1 in project express-firebase-functions is already in progress. Please try again later.","status":"FAILED_PRECONDITION"}}
+[warn] !  functions: failed to update function projects/express-firebase-functions/locations/us-central1/functions/helloWorld 
+[error] Failed to update function projects/express-firebase-functions/locations/us-central1/functions/helloWorld
+[debug] [2022-11-25T08:00:31.577Z] Total Function Deployment time: 735
+[debug] [2022-11-25T08:00:31.577Z] 1 Functions Deployed
+[debug] [2022-11-25T08:00:31.577Z] 1 Functions Errored
+[debug] [2022-11-25T08:00:31.577Z] 0 Function Deployments Aborted
+[debug] [2022-11-25T08:00:31.577Z] Average Function Deployment time: 734
+[info] 
+[info] Functions deploy had errors with the following functions:
+	helloWorld(us-central1)
+[debug] [2022-11-25T08:00:31.762Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[debug] [2022-11-25T08:00:31.762Z] Not printing URL for HTTPS function. Typically this means it didn't match a filter or we failed deployment
+[info] i  functions: cleaning up build files... 
+[debug] [2022-11-25T08:00:31.766Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/express-firebase-functions/locations/us-central1/repositories/gcf-artifacts/packages/hello_world [none]
+[debug] [2022-11-25T08:00:31.768Z] >>> [apiv2][query] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/express-firebase-functions/locations/us-central1/repositories/gcf-artifacts/packages/api [none]
+[debug] [2022-11-25T08:00:31.770Z] >>> [apiv2][query] GET https://us.gcr.io/v2/express-firebase-functions/gcf/us-central1/tags/list [none]
+[debug] [2022-11-25T08:00:32.290Z] <<< [apiv2][status] GET https://us.gcr.io/v2/express-firebase-functions/gcf/us-central1/tags/list 200
+[debug] [2022-11-25T08:00:32.290Z] <<< [apiv2][body] GET https://us.gcr.io/v2/express-firebase-functions/gcf/us-central1/tags/list {"child":[],"manifest":{},"name":"express-firebase-functions/gcf/us-central1","tags":[]}
+[debug] [2022-11-25T08:00:32.290Z] Could not find image for function projects/express-firebase-functions/locations/us-central1/functions/helloWorld
+[debug] [2022-11-25T08:00:32.290Z] Could not find image for function projects/express-firebase-functions/locations/us-central1/functions/api
+[debug] [2022-11-25T08:00:32.598Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/express-firebase-functions/locations/us-central1/repositories/gcf-artifacts/packages/hello_world 200
+[debug] [2022-11-25T08:00:32.598Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/express-firebase-functions/locations/us-central1/repositories/gcf-artifacts/packages/hello_world {"name":"projects/express-firebase-functions/locations/us-central1/operations/d61fa771-d2c4-4f31-bddb-6ae0f3fb66bf","metadata":{"@type":"type.googleapis.com/google.devtools.artifactregistry.v1beta2.OperationMetadata"}}
+[debug] [2022-11-25T08:00:32.598Z] >>> [apiv2][query] GET https://artifactregistry.googleapis.com/v1beta2/projects/express-firebase-functions/locations/us-central1/operations/d61fa771-d2c4-4f31-bddb-6ae0f3fb66bf [none]
+[debug] [2022-11-25T08:00:32.602Z] <<< [apiv2][status] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/express-firebase-functions/locations/us-central1/repositories/gcf-artifacts/packages/api 404
+[debug] [2022-11-25T08:00:32.602Z] <<< [apiv2][body] DELETE https://artifactregistry.googleapis.com/v1beta2/projects/express-firebase-functions/locations/us-central1/repositories/gcf-artifacts/packages/api {"error":{"code":404,"message":"Package \"projects/express-firebase-functions/locations/us-central1/repositories/gcf-artifacts/packages/api\" was not found.","status":"NOT_FOUND"}}
+[debug] [2022-11-25T08:00:33.420Z] <<< [apiv2][status] GET https://artifactregistry.googleapis.com/v1beta2/projects/express-firebase-functions/locations/us-central1/operations/d61fa771-d2c4-4f31-bddb-6ae0f3fb66bf 200
+[debug] [2022-11-25T08:00:33.420Z] <<< [apiv2][body] GET https://artifactregistry.googleapis.com/v1beta2/projects/express-firebase-functions/locations/us-central1/operations/d61fa771-d2c4-4f31-bddb-6ae0f3fb66bf {"name":"projects/express-firebase-functions/locations/us-central1/operations/d61fa771-d2c4-4f31-bddb-6ae0f3fb66bf","metadata":{"@type":"type.googleapis.com/google.devtools.artifactregistry.v1beta2.OperationMetadata"},"done":true,"response":{"@type":"type.googleapis.com/google.protobuf.Empty"}}
+[debug] [2022-11-25T08:00:33.421Z] Functions deploy failed.
+[debug] [2022-11-25T08:00:33.421Z] {
+  "endpoint": {
+    "id": "helloWorld",
+    "project": "express-firebase-functions",
+    "region": "us-central1",
+    "entryPoint": "helloWorld",
+    "platform": "gcfv1",
+    "runtime": "nodejs16",
+    "httpsTrigger": {},
+    "environmentVariables": {
+      "FIREBASE_CONFIG": "{\"projectId\":\"express-firebase-functions\",\"storageBucket\":\"express-firebase-functions.appspot.com\"}",
+      "GCLOUD_PROJECT": "express-firebase-functions"
+    },
+    "codebase": "default",
+    "availableMemoryMb": 256,
+    "securityLevel": "SECURE_ALWAYS",
+    "targetedByOnly": false,
+    "hash": "a3174ee7328857e1352501f6cc2f65b1d36cf6fa",
+    "labels": {
+      "deployment-tool": "cli-firebase"
+    }
+  },
+  "op": "update",
+  "original": {
+    "name": "FirebaseError",
+    "children": [],
+    "context": {
+      "function": "projects/express-firebase-functions/locations/us-central1/functions/helloWorld"
+    },
+    "exit": 1,
+    "message": "Failed to update function projects/express-firebase-functions/locations/us-central1/functions/helloWorld",
+    "original": {
+      "name": "FirebaseError",
+      "children": [],
+      "context": {
+        "body": {
+          "error": {
+            "code": 400,
+            "message": "An operation on function helloWorld in region us-central1 in project express-firebase-functions is already in progress. Please try again later.",
+            "status": "FAILED_PRECONDITION"
+          }
+        },
+        "response": {
+          "statusCode": 400
+        }
+      },
+      "exit": 1,
+      "message": "HTTP Error: 400, An operation on function helloWorld in region us-central1 in project express-firebase-functions is already in progress. Please try again later.",
+      "status": 400
+    },
+    "status": 500
+  }
+}
+[debug] [2022-11-25T08:00:33.605Z] Error: Failed to update function helloWorld in region us-central1
+    at C:\Users\Even\AppData\Local\Volta\tools\image\packages\firebase-tools\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:41:11
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+    at async Fabricator.updateV1Function (C:\Users\Even\AppData\Local\Volta\tools\image\packages\firebase-tools\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:305:32)
+    at async Fabricator.updateEndpoint (C:\Users\Even\AppData\Local\Volta\tools\image\packages\firebase-tools\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:140:13)
+    at async handle (C:\Users\Even\AppData\Local\Volta\tools\image\packages\firebase-tools\node_modules\firebase-tools\lib\deploy\functions\release\fabricator.js:78:17)
+[error] 
+[error] Error: There was an error deploying functions
