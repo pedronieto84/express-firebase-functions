@@ -7,10 +7,15 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.get('/bye', (req, res) => {
+app.get('/get', (req, res) => {
     console.log('adios')
-    res.send('Adios')
+    res.send({metodo: 'get'})
   })
 
+  app.post('/post', (req, res) => {
+    console.log('adios')
+    const data = req.body
+    res.send({data, method:'post'})
+  })
 
 module.exports = app
